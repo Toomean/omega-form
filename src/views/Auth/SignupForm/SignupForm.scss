@@ -1,0 +1,30 @@
+.signup-form {
+    max-width: 556px;
+    margin: 0 auto;
+
+    &__title {
+        margin: 0;
+
+        text-align: center;
+    }
+
+    &__form {
+        margin: 28px 0 0;
+    }
+
+    &__footer {
+        margin: 24px 0 0;
+
+        text-align: right;
+    }
+
+    &__row {
+        display: flex;
+        margin: 16px -8px 0;
+    }
+
+    &__col {
+        flex: 1;
+        padding: 0 8px;
+    }
+}
