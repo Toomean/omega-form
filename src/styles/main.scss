@@ -2,6 +2,7 @@
 
 @import '~normalize.css';
 @import './base/typography.scss';
+@import './base/transitions.scss';
 
 * {
   box-sizing: border-box;
@@ -13,6 +14,9 @@
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
+
   min-height: 100vh;
 
   font-family: Manrope, Helvetica, Arial, sans-serif;

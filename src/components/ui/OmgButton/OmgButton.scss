@@ -1,0 +1,25 @@
+.omg-button {
+    border: none;
+    outline: none;
+
+    transition: background-color .4s;
+
+    padding: 13px 33px;
+    border-radius: 60px;
+
+    background: #01A3FF;
+
+    color: #ffffff;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: (25 / 18);
+    letter-spacing: -0.02em;
+
+    &:hover {
+        background-color: rgba(#01A3FF, 0.7);
+
+        cursor: pointer;
+    }
+}

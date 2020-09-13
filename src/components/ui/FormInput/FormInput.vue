@@ -8,6 +8,7 @@
         '--has-error': !!error,
       }"
       v-bind="$attrs"
+      v-mask="mask"
       @input="onInput"
     />
     <span
@@ -22,6 +23,8 @@
 <script>
 
 export default {
+  name: 'FormInput',
+
   inheritAttrs: false,
 
   props: {
@@ -34,8 +37,8 @@ export default {
       default: '',
     },
     mask: {
-      type: String,
-      default: '',
+      type: [String, Object],
+      default: null,
     },
     value: {
       type: [String, Number],
