@@ -17,7 +17,11 @@
     line-height: (25 / 18);
     letter-spacing: -0.02em;
 
-    &:hover {
+    &[disabled="disabled"] {
+        opacity: .5;
+    }
+
+    &:not([disabled]):hover {
         background-color: rgba(#01A3FF, 0.7);
 
         cursor: pointer;

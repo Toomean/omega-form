@@ -16,14 +16,13 @@
       <ValidationObserver
         class="signup-form__form"
         tag="form"
-        v-slot="{ handleSubmit }"
+        v-slot="{ handleSubmit, valid, invalid, passed }"
         @submit.prevent
       >
         <div class="signup-form__row">
           <div class="signup-form__col">
             <ValidationProvider
               rules="required"
-              mode="eager"
               :name="$t('signup.firstName')"
               v-slot="{ errors }"
             >
@@ -39,7 +38,6 @@
           <div class="signup-form__col">
             <ValidationProvider
               rules="required"
-              mode="eager"
               :name="$t('signup.lastName')"
               v-slot="{ errors }"
             >
@@ -57,7 +55,6 @@
           <div class="signup-form__col">
             <ValidationProvider
               rules="required"
-              mode="eager"
               v-slot="{ errors }"
               :name="$t('signup.phone')"
             >
@@ -80,7 +77,6 @@
           <div class="signup-form__col">
             <ValidationProvider
               rules="required|email"
-              mode="eager"
               v-slot="{ errors }"
               :name="$t('signup.email')"
             >
@@ -98,6 +94,7 @@
           <omg-button
             type="submit"
             @click="handleSubmit(onSubmit)"
+            :disabled="!passed"
           >
             {{ $t('signup.createAccount') }}
           </omg-button>
